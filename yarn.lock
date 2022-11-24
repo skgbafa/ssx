@@ -4844,7 +4844,7 @@
   integrity sha512-PuxRlyTlycXrTU11B22XcCz1PUU7p5krXxnb+ztPkgR3fAMP3ubENgoUyLllUJXxx2O/Jpne+0P9HIro+vilPg==
 
 "@spruceid/ssx@file:packages/ssx-sdk":
-  version "0.1.1"
+  version "1.0.0"
   dependencies:
     "@metamask/detect-provider" "^1.2.0"
     "@spruceid/ssx-gnosis-extension" "*"
@@ -5767,14 +5767,14 @@
     "@typescript-eslint/types" "5.42.1"
     eslint-visitor-keys "^3.3.0"
 
-"@wagmi/core@^0.6.12":
-  version "0.6.12"
-  resolved "https://registry.yarnpkg.com/@wagmi/core/-/core-0.6.12.tgz#19d35424840a8c9f5396869e24464e2137ea8fc2"
-  integrity sha512-RYwjfzFlZ8cljrlZ6+monaWKmtVQYALutlrESP/CYklGg+3DAjwv7n95EU5gS7Y9mvZbiLKZxg4XjFB3mVohfA==
+"@wagmi/core@0.7.5":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@wagmi/core/-/core-0.7.5.tgz#ee80af944b503bcbfa2bf21ec99801f4150cdf17"
+  integrity sha512-4pODpOzfZ2Hg4/N8CdIgFvRA4bKTQegGwt+m6xz0EeV0LOXPU9tGiXim9mJ2NUm1bDt6tFxE437NgqPiqQ1xUg==
   dependencies:
-    abitype "^0.1.7"
+    abitype "^0.1.8"
     eventemitter3 "^4.0.7"
-    zustand "^4.1.1"
+    zustand "^4.1.4"
 
 "@walletconnect/browser-utils@^1.8.0":
   version "1.8.0"
@@ -6184,7 +6184,7 @@ abbrev@1, abbrev@^1.0.0:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
-abitype@^0.1.6, abitype@^0.1.7:
+abitype@^0.1.6, abitype@^0.1.7, abitype@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/abitype/-/abitype-0.1.8.tgz#f47d397b95d81a445a0d0ef2fdd7827131b3fd74"
   integrity sha512-2pde0KepTzdfu19ZrzYTYVIWo69+6UbBCY4B1RDiwWgo2XZtFSJhF6C+XThuRXbbZ823J0Rw1Y5cP0NXYVcCdQ==
@@ -20914,16 +20914,16 @@ w3c-xmlserializer@^3.0.0:
   dependencies:
     xml-name-validator "^4.0.0"
 
-wagmi@^0.7.5:
-  version "0.7.15"
-  resolved "https://registry.yarnpkg.com/wagmi/-/wagmi-0.7.15.tgz#da83c1e22641efb33899e203715f1ae4eb28f9b1"
-  integrity sha512-UGkcgL/bBg880uGEOTmKuWSxe+OtbPv0x1zKrDWi0McwB6o7W1trVVdZ1hCkHemB9HA2BN+svv3ALo9ZG4Xt8Q==
+wagmi@^0.8.6:
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/wagmi/-/wagmi-0.8.6.tgz#6d88cbee81dd690d9ccb93a7fa3696686f0ea7aa"
+  integrity sha512-60pQtwrT7qrXRr68rAJLdPlk9PhDuHvaT1A8cUdEU6bkUamk9F8DHeGQ52NJkBubLLaaUXmPMZw8vWoVheGxWA==
   dependencies:
     "@coinbase/wallet-sdk" "^3.5.3"
     "@tanstack/query-sync-storage-persister" "^4.14.5"
     "@tanstack/react-query" "^4.14.5"
     "@tanstack/react-query-persist-client" "^4.14.5"
-    "@wagmi/core" "^0.6.12"
+    "@wagmi/core" "0.7.5"
     "@walletconnect/ethereum-provider" "^1.8.0"
     abitype "^0.1.7"
     use-sync-external-store "^1.2.0"
@@ -22006,7 +22006,7 @@ zip-stream@^4.1.0:
     compress-commons "^4.1.0"
     readable-stream "^3.6.0"
 
-zustand@^4.1.1:
+zustand@^4.1.4:
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.1.4.tgz#b0286da4cc9edd35e91c96414fa54bfa4652a54d"
   integrity sha512-k2jVOlWo8p4R83mQ+/uyB8ILPO2PCJOf+QVjcL+1PbMCk1w5OoPYpAIxy9zd93FSfmJqoH6lGdwzzjwqJIRU5A==

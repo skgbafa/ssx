@@ -1,6 +1,7 @@
 import { useContext, createContext, useState, useEffect, ReactNode } from 'react';
 import { SSX, SSXConfig } from "@spruceid/ssx";
 import { useSigner } from 'wagmi';
+// const { useSigner } = require('wagmi');
 
 /** Props for SSX Provider */
 export interface SSXProviderProps {
