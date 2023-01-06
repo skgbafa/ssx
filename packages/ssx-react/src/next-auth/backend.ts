@@ -44,12 +44,6 @@ export const SSXNextAuth = (
       const { siwe, signature, daoLogin, ens } = session;
       if (!siwe) return null;
 
-      //  // check domain
-      //  const nextAuthUrl = new URL(process.env.DOMAIN as string);
-      //  if (siwe.domain !== nextAuthUrl.host) {
-      //     return null;
-      //  }
-
       if (success) {
         return {
           id: `did:pkh:eip155:${siwe.chainId}:${siwe.address}`,
