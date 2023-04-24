@@ -1,3 +1,6 @@
+import { Container, inject, injectable } from 'inversify';
+import 'reflect-metadata';
+import { TYPES } from './modules/interfaces';
 import {
   SSXRPCProviders,
   SSXEnsData,
@@ -95,7 +98,7 @@ export class SSX {
   public userAuthorization: IUserAuthorization;
 
   /** Encryption Module */
-  public encryption: IEncryption;
+  // public encryption: IEncryption;
 
   /** DataVault Module */
   public dataVault: IDataVault;
@@ -106,16 +109,30 @@ export class SSX {
   /** Storage Module */
   public storage: IStorage;
 
+  /** Container for injected dependencies */
+  private container: Container;
+
   constructor(private config: SSXConfig = SSX_DEFAULT_CONFIG) {
+    this.container = new Container();
+    this.container.bind(TYPES.Encryption).to(SignatureEncryption);
+
     // TODO: initialize these based on the config
     this.userAuthorization = new UserAuthorization(config);
     // get encryption config from config.modules.encryption
     // determine which encryption module to use
     // if encryption module is false, don't initialize encryption or dependent modules
-    this.encryption = new SignatureEncryption({}, this.userAuthorization);
+    // this.encryption = new SignatureEncryption({}, this.userAuthorization);
     this.dataVault = new BrowserDataVault({}, this.encryption);
     this.credential = new Credential({}, this.dataVault);
     this.storage = new BrowserStorage({});
+  }
+
+  /**
+   * Getter for Encryption Module
+   * @returns Encryption Module
+   */
+  public get encryption() {
+    return this.container.get<IEncryption>(TYPES.Encryption);
   }
 
   /**

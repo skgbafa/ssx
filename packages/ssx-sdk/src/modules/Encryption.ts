@@ -1,5 +1,7 @@
+import { inject, injectable } from 'inversify';
 import * as jose from 'jose';
 import { IUserAuthorization } from './UserAuthorization';
+import { TYPES } from './interfaces';
 
 function jsonToUint8Array(jsonObj) {
   // Stringify the JSON object
@@ -69,12 +71,14 @@ class LitEncryption implements IEncryption {
  * The format encrypted state is a JWE.
  * This module should not be used in production.
  */
+@injectable()
 class SignatureEncryption implements IEncryption {
-  private userAuth: IUserAuthorization;
   private encryptionKey?: any;
-  constructor(config: any, userAuth: IUserAuthorization) {
-    this.userAuth = userAuth;
-  }
+
+  constructor(
+    @inject(TYPES.UserAuthorization) private userAuth: IUserAuthorization,
+    private config: any,
+  ) {}
 
   public generateEncryptionKey = async () => {
     if (this.encryptionKey) {

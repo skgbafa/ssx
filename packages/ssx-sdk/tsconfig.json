@@ -3,6 +3,10 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules/", "dist/**/*"],
   "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES6",
+    "lib": ["es6", "dom"],
     "outDir": "./dist", /* Specify an output folder for all emitted files. */
     "allowJs": true /* Allow javascript files to be compiled. */,
   },
